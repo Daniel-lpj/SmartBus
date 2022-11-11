@@ -7,8 +7,8 @@ import Onibus from "../Pages/Onibus";
 
 const Routes = () => (
   <CustomRoutes>
-    <Route path="/" element={<Home />} />
-    <Route path="/login" element={<Login />} />
+    <Route path="/" element={<Login />} />
+    <Route path="/home" element={<Home />} />
     <Route path="/onibus" element={<Onibus />} />
     <Route path="/itinerario" element={<Itinerario />} />
   </CustomRoutes>
