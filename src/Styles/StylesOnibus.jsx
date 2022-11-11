@@ -13,6 +13,7 @@ export const Titulo = styled.h1`
   color: transparent;
 
   @media (max-width: 500px) {
+    margin-top: 8em;
     font-size: 24px;
     font-weight: 800;
   }

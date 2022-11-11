@@ -18,6 +18,15 @@ export const Navegacao = styled.nav`
   width: 450px;
   transform: translateY(-50%);
 
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: auto;
+    width: auto;
+  }
+
   a {
     position: relative;
     width: 33.333%;

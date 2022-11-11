@@ -17,4 +17,9 @@ export const Titulo = styled.h1`
   -webkit-text-stroke: 2px #ffeba7;
   -webkit-text-fill-color: transparent;
   color: transparent;
+
+  @media (max-width: 500px) {
+    margin-top: -2.5em;
+    font-size: 46px;
+  }
 `;
