@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "../Components/NavBar/NavBar";
 import OnibusImagem from "../Images/onibus.png";
 import {
   Container,
@@ -11,6 +12,7 @@ import {
 const Onibus = () => {
   return (
     <>
+      <NavBar />
       <Titulo>Ônibus disponíveis</Titulo>
       <Container>
         <OnibusBloco>

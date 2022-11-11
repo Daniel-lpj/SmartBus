@@ -7,10 +7,10 @@ export const Container = styled.div`
 `;
 
 export const Titulo = styled.h1`
-  margin-top: 0.5em;
+  margin-top: -0.5em;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  font-size: 72px;
+  font-size: 96px;
   line-height: 1;
   color: #ffeba7;
   text-align: center;

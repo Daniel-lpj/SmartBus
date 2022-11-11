@@ -1,12 +1,8 @@
 import React from "react";
-import { Container, Titulo } from "../Styles/StylesHome";
+import NavBar from "../Components/NavBar/NavBar";
 
 const Itinerario = () => {
-  return (
-    <Container>
-      <Titulo>Em breve...</Titulo>
-    </Container>
-  );
+  return <NavBar />;
 };
 
 export default Itinerario;
