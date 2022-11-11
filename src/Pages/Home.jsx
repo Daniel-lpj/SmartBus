@@ -4,10 +4,12 @@ import { Container, Titulo } from "../Styles/StylesHome";
 
 const Home = () => {
   return (
-    <Container>
+    <>
       <NavBar />
-      <Titulo>Smart bus</Titulo>
-    </Container>
+      <Container>
+        <Titulo>Smart bus</Titulo>
+      </Container>
+    </>
   );
 };
 

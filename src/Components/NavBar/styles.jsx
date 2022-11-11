@@ -5,18 +5,22 @@ export const Container = styled.div`
   flex-direction: row;
   height: 100%;
   margin: 0;
-  background-color: #292929;
   overflow: hidden;
 `;
 
 export const Navegacao = styled.nav`
-  position: absolute;
+  /* position: absolute;
   top: 51%;
   right: 0;
   left: 0;
   margin: 0 auto;
   width: 450px;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
+
+  display: flex;
+  flex-direction: row;
+  height: 4em;
+  margin: 0 auto;
 
   @media (max-width: 500px) {
     display: flex;
