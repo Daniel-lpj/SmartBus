@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import NavBar from "../Components/NavBar/NavBar";
 import OnibusImagem from "../Images/onibus.png";
 import {
@@ -10,7 +11,9 @@ import {
 } from "../Styles/StylesOnibus";
 
 const Onibus = () => {
-  const listaOnibus = [
+  const [listaOnibus, setListaOnibus] = useState([]);
+
+  const onibus = [
     { linha: "271A-10", nome: "Metrô Santana", descricao: "Trajeto rápido" },
     { linha: "121G-10", nome: "Metrô Tucuruvi", descricao: "Trajeto demorado" },
     { linha: "1721-10", nome: "Metrô Carandiru", descricao: "Trajeto médio" },
@@ -18,6 +21,25 @@ const Onibus = () => {
     { linha: "121G-10", nome: "Metrô Tucuruvi", descricao: "Trajeto demorado" },
     { linha: "1721-10", nome: "Metrô Carandiru", descricao: "Trajeto médio" },
   ];
+
+  const api = axios.create({
+    headers: {
+      "Content-Type": "application/json",
+    },
+    baseURL: `http://localhost:8080/gs/rest`?.toString(),
+  });
+
+  useEffect(() => {
+    (async () => {
+      try {
+        await api.get(`/onibus`).then((result) => {
+          setListaOnibus(onibus);
+        });
+      } catch {
+        console.log("Error");
+      }
+    })();
+  });
 
   return (
     <>
