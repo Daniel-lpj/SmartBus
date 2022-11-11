@@ -10,95 +10,36 @@ import {
 } from "../Styles/StylesOnibus";
 
 const Onibus = () => {
+  const listaOnibus = [
+    { linha: "271A-10", nome: "Metrô Santana", descricao: "Trajeto rápido" },
+    { linha: "121G-10", nome: "Metrô Tucuruvi", descricao: "Trajeto demorado" },
+    { linha: "1721-10", nome: "Metrô Carandiru", descricao: "Trajeto médio" },
+    { linha: "271A-10", nome: "Metrô Santana", descricao: "Trajeto rápido" },
+    { linha: "121G-10", nome: "Metrô Tucuruvi", descricao: "Trajeto demorado" },
+    { linha: "1721-10", nome: "Metrô Carandiru", descricao: "Trajeto médio" },
+  ];
+
   return (
     <>
       <NavBar />
       <Titulo>Ônibus disponíveis</Titulo>
       <Container>
-        <OnibusBloco>
-          <ImagemOnibus src={OnibusImagem} alt="Imagem de ônibus" />
-          <Info>
-            <p>
-              Linha: <b>271-A(10)</b>
-            </p>
-            <p>
-              Nome: <b>Metrô Santana</b>
-            </p>
-            <p>
-              Linha: <b>271-A(10)</b>
-            </p>
-          </Info>
-        </OnibusBloco>
-        <OnibusBloco>
-          <ImagemOnibus src={OnibusImagem} alt="Imagem de ônibus" />
-          <Info>
-            <p>
-              Linha: <b>121-G(10)</b>
-            </p>
-            <p>
-              Nome: <b>Metrô Tucuruvi</b>
-            </p>
-            <p>
-              Linha: <b>121-G(10)</b>
-            </p>
-          </Info>
-        </OnibusBloco>
-        <OnibusBloco>
-          <ImagemOnibus src={OnibusImagem} alt="Imagem de ônibus" />
-          <Info>
-            <p>
-              Linha: <b>1721(10)</b>
-            </p>
-            <p>
-              Nome: <b>Metrô Carandiru</b>
-            </p>
-            <p>
-              Linha: <b>1721(10)</b>
-            </p>
-          </Info>
-        </OnibusBloco>
-        <OnibusBloco>
-          <ImagemOnibus src={OnibusImagem} alt="Imagem de ônibus" />
-          <Info>
-            <p>
-              Linha: <b>271-A(10)</b>
-            </p>
-            <p>
-              Nome: <b>Metrô Santana</b>
-            </p>
-            <p>
-              Linha: <b>271-A(10)</b>
-            </p>
-          </Info>
-        </OnibusBloco>
-        <OnibusBloco>
-          <ImagemOnibus src={OnibusImagem} alt="Imagem de ônibus" />
-          <Info>
-            <p>
-              Linha: <b>121-G(10)</b>
-            </p>
-            <p>
-              Nome: <b>Metrô Tucuruvi</b>
-            </p>
-            <p>
-              Linha: <b>121-G(10)</b>
-            </p>
-          </Info>
-        </OnibusBloco>
-        <OnibusBloco>
-          <ImagemOnibus src={OnibusImagem} alt="Imagem de ônibus" />
-          <Info>
-            <p>
-              Linha: <b>1721(10)</b>
-            </p>
-            <p>
-              Nome: <b>Metrô Carandiru</b>
-            </p>
-            <p>
-              Linha: <b>1721(10)</b>
-            </p>
-          </Info>
-        </OnibusBloco>
+        {listaOnibus.map((item, index) => (
+          <OnibusBloco key={index}>
+            <ImagemOnibus src={OnibusImagem} alt="Imagem de ônibus" />
+            <Info>
+              <p>
+                Linha: <b>{item.linha}</b>
+              </p>
+              <p>
+                Nome: <b>{item.nome}</b>
+              </p>
+              <p>
+                Descrição: <b>{item.descricao}</b>
+              </p>
+            </Info>
+          </OnibusBloco>
+        ))}
       </Container>
     </>
   );
