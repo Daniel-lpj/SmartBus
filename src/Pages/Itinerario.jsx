@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import NavBar from "../Components/NavBar/NavBar";
 import {
   ButtonInput,
@@ -9,15 +8,16 @@ import {
   Nome,
 } from "../Styles/StylesItinerario";
 import { Titulo } from "../Styles/StylesOnibus";
+import { useNavigate } from "react-router-dom";
 
 const Itinerario = () => {
+  const navigate = useNavigate();
   const api = axios.create({
     headers: {
       "Content-Type": "application/json",
     },
     baseURL: `http://localhost:8080/gs/rest`?.toString(),
   });
-  const navigate = useNavigate();
 
   const [nome, setNome] = useState("");
   const [linha, setLinha] = useState("");
@@ -35,6 +35,7 @@ const Itinerario = () => {
           })
           .then((result) => {
             if (result.status === 201) {
+              alert("Agradecemos pela sugestão!");
               navigate("/home");
             }
           });

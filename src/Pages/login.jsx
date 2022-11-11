@@ -5,13 +5,13 @@ import { ButtonInput, Formulario, Input, Nome } from "../Styles/StylesLogin";
 import { Titulo } from "../Styles/StylesOnibus";
 
 const Login = () => {
+  const navigate = useNavigate();
   const api = axios.create({
     headers: {
       "Content-Type": "application/json",
     },
     baseURL: `http://localhost:8080/gs/rest`?.toString(),
   });
-  const navigate = useNavigate();
 
   const [nome, setNome] = useState("");
   const [senha, setSenha] = useState("");
@@ -22,7 +22,8 @@ const Login = () => {
       try {
         await api
           .post(`/login`, {
-            ds_nome: nome,
+            id_usuario: null,
+            ds_login: nome,
             ds_senha: senha,
           })
           .then((result) => {
