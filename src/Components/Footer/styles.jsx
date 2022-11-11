@@ -7,7 +7,7 @@ export const TextFooter = styled.p`
 `;
 
 export const StyledFooter = styled.footer`
-  height: 3.125em;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

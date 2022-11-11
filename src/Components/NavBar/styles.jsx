@@ -5,7 +5,6 @@ export const Container = styled.div`
   flex-direction: row;
   height: 100%;
   margin: 0;
-  overflow: hidden;
 `;
 
 export const Navegacao = styled.nav`
@@ -26,9 +25,7 @@ export const Navegacao = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    height: auto;
-    width: auto;
+    width: 100%;
   }
 
   a {
