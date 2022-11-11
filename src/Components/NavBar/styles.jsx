@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Navegacao = styled.nav`
   position: absolute;
-  top: 50%;
+  top: 51%;
   right: 0;
   left: 0;
   margin: 0 auto;
